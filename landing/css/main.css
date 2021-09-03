@@ -71,6 +71,11 @@
     z-index: 2;
 }
 
+.hero--call-to-action:active {
+    background-color: #00ffb7;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.05), inset 0px 10px 30px rgba(0,0,0,0.1);
+}
+
 @media only screen and (max-width: 800px) {
     .hero {
         background: url(../assets/hero-image-mobile.jpg);

@@ -1,0 +1,137 @@
+.registration--hero {
+    width: 100vw;
+    height: 100vh;
+    background: url(./registration-background.jpg);
+    background-position: center; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    z-index: -1;
+}
+
+.registration--hero--blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.86);
+    z-index: 1;
+}
+
+.registration--title {
+    font-style: normal;
+    font-weight: 800;
+    width: 100%;
+    text-align: center;
+    margin-top: 82px;
+    margin-bottom: 117px;
+    font-size: 96px;
+    line-height: 104px;
+    align-items: center;
+    letter-spacing: -3px;
+    color: #2D3436;
+    z-index: 2;
+}
+
+.registration--input {
+    width: 610px;
+    height: 61px;
+    margin: 0 auto;
+    margin-bottom: 32px;
+    background: #FFFFFF;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+    border: 0;
+    border-radius: 50px;
+    padding-left: 56px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: 0.2px;
+
+    color: #716E6E;
+    z-index: 2;
+}
+
+.registration--paragraph {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: 0.2px;
+    margin: 32px auto;
+    z-index: 2;
+}
+
+.registration--paragraph p{
+    display: inline;
+}
+
+.registration--input__checkbox {
+    -webkit-appearance: none;
+    border-radius: 10px;
+    margin: auto;
+    margin-left: 2rem;
+    padding: 0px;
+    width: 32px;
+    height: 32px;
+}
+
+.registration--input__checkbox:active, .registration--input__checkbox:checked:active {
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+.registration--input__checkbox:checked {
+	background-color: #00ffb7;
+	border: 1px solid #adb8c0;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+	color: #99a1a7;
+}
+
+.registration--input__checkbox:checked:after {
+	content: '\2714';
+	font-size: 14px;
+	position: absolute;
+	top: 0px;
+	left: 3px;
+	color: #99a1a7;
+}
+
+.registration--submit {
+    width: 256px;
+    height: 62px;
+    margin: 3rem auto;
+    border: 0;
+    background: #55EFC4;
+    border-radius: 16px;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 36px;
+
+    color: #2D3436;
+    z-index: 2;
+}
+
+.registration--submit:active {
+    background-color: #00ffb7;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.05), inset 0px 10px 30px rgba(0,0,0,0.1);
+}
+
+@media only screen and (max-width: 800px) {
+    .registration--input {
+        width: 80vw;
+    }
+
+    .registration--input__checkbox {
+        -webkit-appearance: none;
+        border-radius: 10px;
+        margin: auto;
+        margin-left: 2rem;
+        padding: 0px;
+        width: 32px;
+        height: 32px;
+    }
+}
