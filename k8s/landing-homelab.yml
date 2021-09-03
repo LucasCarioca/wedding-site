@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: wedding-landing
+  name: wedding-landing-deployment
+  labels:
+    app: wedding-landing
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wedding-landing
+  template:
+    metadata:
+      labels:
+        app: wedding-landing
+    spec:
+      containers:
+        - name: wedding-landing
+          image: ghcr.io/lucascarioca/wedding-site-landing:latest
+          ports:
+            - containerPort: 80
+              name: wl-http
+---
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: wedding-landing
+  name: wedding-landing-service
+  annotations:
+    metallb.universe.tf/address-pool: default
+spec:
+  type: LoadBalancer
+  loadBalancerIP: 10.10.0.218
+  ports:
+    - name: tcp
+      port: 80
+      targetPort: wl-http
+  selector:
+    app: wedding-landing
