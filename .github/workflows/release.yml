@@ -39,7 +39,7 @@ jobs:
   landing-deploy-homelab:
     name: Landing Page - deploy homelab
     runs-on: ubuntu-latest
-    needs: build-release
+    needs: landing-build
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
