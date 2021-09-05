@@ -37,7 +37,7 @@
 
 .registration--input {
     width: 610px;
-    height: 61px;
+    height: 64px;
     margin: 0 auto;
     margin-bottom: 32px;
     background: #FFFFFF;
@@ -57,7 +57,7 @@
 .registration--paragraph {
     font-style: normal;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 24px;
     line-height: 32px;
     letter-spacing: 0.2px;
     margin: 32px auto;
@@ -121,8 +121,19 @@
 }
 
 @media only screen and (max-width: 800px) {
+    .registration--title {
+        font-size: 50px;
+        line-height: 104px;
+    }
+
+    .registration--paragraph {
+        font-size: 16px;
+    }
+
     .registration--input {
         width: 80vw;
+        font-size: 16px;
+        height: 52px;
     }
 
     .registration--input__checkbox {
