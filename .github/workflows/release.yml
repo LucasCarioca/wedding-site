@@ -112,4 +112,4 @@ jobs:
         run: kubectl apply -f k8s/app-homelab.yaml
 
       - name: Set Image
-        run: kubectl set image deployments/wedding-app-deployment -n wedding wedding-app=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}-app-page:${{ env.VERSION }}
+        run: kubectl set image deployments/wedding-app-deployment -n wedding wedding-app=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}-app:${{ env.VERSION }}
