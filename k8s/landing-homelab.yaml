@@ -27,8 +27,6 @@ kind: Service
 metadata:
   namespace: wedding
   name: wedding-landing-service
-  annotations:
-    metallb.universe.tf/address-pool: default
 spec:
   type: NodePort
   ports:
