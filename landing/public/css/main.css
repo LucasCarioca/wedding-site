@@ -86,6 +86,9 @@
 }
 
 @media only screen and (max-width: 600px) {
+    .hero--blur {
+        background: radial-gradient(60% 60% at 50% 37.65%, rgba(255, 255, 255, 0) 0%, rgba(33, 30, 30, 0.54) 100%);
+    }
     .hero--title {
         font-size: 50px;
         line-height: 104px;
