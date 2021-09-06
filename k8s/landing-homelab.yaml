@@ -35,6 +35,7 @@ spec:
   ports:
     - name: tcp
       port: 80
+      nodePort: 30102
       targetPort: wl-http
   selector:
     app: wedding-landing

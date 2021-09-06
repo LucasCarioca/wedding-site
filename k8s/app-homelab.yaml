@@ -34,7 +34,8 @@ spec:
   loadBalancerIP: 10.10.0.219
   ports:
     - name: tcp
-      port: 81
+      port: 80
+      nodePort: 30101
       targetPort: wa-http
   selector:
     app: wedding-app
