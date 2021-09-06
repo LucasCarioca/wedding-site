@@ -91,3 +91,25 @@ jobs:
 
       - name: Set Image
         run: kubectl set image deployments/wedding-landing-deployment -n wedding wedding-landing=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}-landing-page:${{ env.VERSION }}
+  landing-app-homelab:
+    name: App Page - deploy homelab
+    runs-on: ubuntu-latest
+    needs: app-build
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      
+      - name: Install Kubectl
+        uses: azure/setup-kubectl@v1
+
+      - name: Setup Context
+        uses: azure/k8s-set-context@v1
+        with:
+          method: kubeconfig
+          kubeconfig: ${{ secrets.HOME_LAB_KUBE_CONFIG }}
+
+      - name: Deploy Application
+        run: kubectl apply -f k8s/app-homelab.yaml
+
+      - name: Set Image
+        run: kubectl set image deployments/wedding-app-deployment -n wedding wedding-app=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}-app-page:${{ env.VERSION }}
