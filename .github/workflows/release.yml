@@ -90,7 +90,7 @@ jobs:
         run: kubectl apply -f k8s/landing-homelab.yaml
 
       - name: Set Image
-        run: kubectl set image deployments/wedding-landing-deployment -n wedding wedding-landing=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}-landing-page:${{ env.VERSION }}
+        run: kubectl set image deployments/wedding-landing-deployment -n wedding wedding-landing=ghcr.io/lucascarioca/wedding-site-landing-page:${{ env.VERSION }}
   landing-app-homelab:
     name: App Page - deploy homelab
     runs-on: ubuntu-latest
@@ -112,4 +112,4 @@ jobs:
         run: kubectl apply -f k8s/app-homelab.yaml
 
       - name: Set Image
-        run: kubectl set image deployments/wedding-app-deployment -n wedding wedding-app=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}-app:${{ env.VERSION }}
+        run: kubectl set image deployments/wedding-app-deployment -n wedding wedding-app=ghcr.io/lucascarioca/wedding-site-app:${{ env.VERSION }}
