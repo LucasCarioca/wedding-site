@@ -20,7 +20,7 @@ spec:
           image: ghcr.io/lucascarioca/wedding-site-app-page:latest
           ports:
             - containerPort: 80
-              name: wl-http
+              name: wa-http
 ---
 apiVersion: v1
 kind: Service
